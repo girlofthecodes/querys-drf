@@ -69,5 +69,5 @@ class CreateBookView(APIView):
 class RetrieveBooksView(APIView): 
     def get(self, request, id): 
         queryset = Book.objects.get(id=id)
-        serializer = CreatBookSerializer(queryset)
+        serializer = CreatBooksSerializer(queryset)
         return Response(serializer.data, status=status.HTTP_200_OK)
